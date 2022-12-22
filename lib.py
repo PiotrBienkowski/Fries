@@ -5,8 +5,8 @@ from reportlab.graphics import renderPM
 from reportlab.graphics import renderPDF
 
 global_width = 1
-global_color = "white"
-global_background_color = "black"
+global_color = "black"
+global_background_color = "white"
 global_mode = "!DEBUG"
 
 def draw_corner(x1, y1, x2, y2, right = False, color="", linecap = True, stroke_width = -1):
@@ -329,14 +329,9 @@ def svg_init(width, height, name, content, width_s, height_s):
     start_line = "<svg width='" + str(width_s) + "' height='" + str(height_s) + "' xmlns='http://www.w3.org/2000/svg' style=''>" 
     end_line = "</svg>"
 
-    print(global_color)
-    print(global_background_color)
-
     f = open(str(name) + ".svg", "w")
     f.write(start_line)
     f.write(set_background(width_s, height_s))
-
     f.write(content)
-
     f.write(end_line)
     f.close()

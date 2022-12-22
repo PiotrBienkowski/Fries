@@ -2,7 +2,10 @@ import lib
 
 global_mode = "!DEBUG"
 
-def init(size_v = -1):
+def init(size_v = -1, folder_name = ""):
+    if folder_name[len(folder_name) - 1] != "/":
+        folder_name += "/"
+
     if global_mode == "DEBUG":
         size = 200
     else:
@@ -20,9 +23,13 @@ def init(size_v = -1):
         else:
             name = lib.generate_name()
         
-        lib.svg_init(2 * size, size, name, lib.generate(size, size) + lib.generate(size, size, size))
+        name = folder_name + name
+        print("file_name:", name)
+
+        lib.svg_init(2 * size, size, name, lib.generate(size, size) + lib.generate(size, size, size), size, size)
         lib.svgToPdf(name)
         lib.svgToPng(name)
 
 lib.set_variables()
-init()
+for i in range(300):
+    init(1000, "res")
