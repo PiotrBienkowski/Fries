@@ -31,5 +31,8 @@ def init(size_v = -1, folder_name = ""):
         lib.svgToPng(name)
 
 lib.set_variables()
-for i in range(300):
-    init(1000, "res")
+
+tmp_size = int(input())
+tmp_folder_name = input()
+
+init(tmp_size, tmp_folder_name)

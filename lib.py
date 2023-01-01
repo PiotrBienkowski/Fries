@@ -305,7 +305,7 @@ def generate(width, height, sta_x = 0, sta_y = 0):
 def generate_name():
     ret = ""
     
-    ret += "fryta_" + str(time.time()).replace('.', '_')
+    ret += "fries_" + str(time.time()).replace('.', '_')
     
     return ret
 
