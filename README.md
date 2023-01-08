@@ -12,4 +12,4 @@ and after a few weeks i coded the generator of Fries in python. The program gene
 3) to the input you should give two values:
 - size of output image
 - name of final folder
-4) wait a few seconds and you have your unique character
+4) wait a few seconds and you have your unique character.
